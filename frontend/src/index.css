@@ -74,9 +74,6 @@ html, body {
     pointer-events: none;
 }
 
-/* hide platform badge */
-#emergent-badge { display: none !important; }
-
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: #050A10; }
 ::-webkit-scrollbar-thumb { background: #1A2433; border-radius: 0; }

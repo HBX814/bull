@@ -8,12 +8,10 @@ export default function Hero() {
       className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden grid-bg"
     >
       <div
-        className="absolute inset-0 opacity-[0.18] mix-blend-screen pointer-events-none"
+        className="absolute inset-0 opacity-[0.18] pointer-events-none"
         style={{
           backgroundImage:
-            "url(https://static.prod-images.emergentagent.com/jobs/e4fb3a5a-e659-425a-97c5-2d32e5222512/images/60c582f36fa666368219e68795241eb741f1d481371340be4adedda31a7da6ec.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+            "radial-gradient(circle at 50% 30%, rgba(0, 240, 255, 0.15), transparent 70%)",
         }}
       />
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00F0FF]/40 to-transparent" />
