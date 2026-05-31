@@ -88,6 +88,6 @@ credentials.json
 .credentials
 
 # Generated PDFs
-backend/generated_reports/
-*.pdf
+# backend/generated_reports/
+# *.pdf
 
