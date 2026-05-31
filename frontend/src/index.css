@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #050A10;
+    color: #FFFFFF;
+    font-family: 'Manrope', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background: #00F0FF;
+    color: #050A10;
+}
+
+@layer base {
+    :root {
+        --background: 215 70% 4%;
+        --foreground: 0 0% 100%;
+        --card: 215 50% 8%;
+        --card-foreground: 0 0% 100%;
+        --popover: 215 50% 8%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 0 0% 100%;
+        --primary-foreground: 215 70% 4%;
+        --secondary: 215 40% 12%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 215 30% 14%;
+        --muted-foreground: 215 14% 65%;
+        --accent: 185 100% 50%;
+        --accent-foreground: 215 70% 4%;
+        --destructive: 351 100% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 0 0% 100% / 0.1;
+        --input: 0 0% 100% / 0.15;
+        --ring: 185 100% 50%;
+        --radius: 0.125rem;
+    }
+}
+
+@layer base {
+    * { @apply border-border; }
+}
+
+/* custom utility classes */
+.text-overline {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: #00F0FF;
+}
+
+.grid-bg {
+    background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.scanline::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        0deg, rgba(0,240,255,0.03) 0px, rgba(0,240,255,0.03) 1px,
+        transparent 1px, transparent 4px);
+    pointer-events: none;
+}
+
+/* hide platform badge */
+#emergent-badge { display: none !important; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #050A10; }
+::-webkit-scrollbar-thumb { background: #1A2433; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #2A3443; }
